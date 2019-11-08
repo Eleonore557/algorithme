@@ -1,17 +1,29 @@
-export default function spaceAge(planet, number) {
-    this.planet = planet;
-    this.number = number; 
-}
-var planet1 = new spaceAge('Jupiter',901876382);
-var planet2 = new spaceAge('Earth',1000000000);
-var planet3 = new spaceAge('Mercury',2134835688);
-var planet4 = new spaceAge('Venus',189839836);
-var planet5 = new spaceAge('Mars',2329871239);
-var planet6 = new spaceAge('Saturn',3000000000);
-var planet7 = new spaceAge('Uranus',3210123456);
-var planet8 = new spaceAge('Neptune',8210123456);
+export default function spaceAge(planet, number){ 
 
-var time = `${this.planet}` + `${this.number}` * 31.69 / 1000000000;
-{
+    if  (planet === 'Earth'){
+        return parseFloat((number / 31557600).toFixed(2)); 
+    }
+    if  (planet === 'Mercury'){
+        return parseFloat((number / 31557600 / 0.2408467).toFixed(2)); 
+    } 
+    if  (planet === 'Venus'){
+        return parseFloat((number / 31557600 / 0.61519726).toFixed(2));
+    }
+    if  (planet === 'Mars'){
+        return parseFloat((number / 31557600 / 1.8808158).toFixed(2));
+    }
+     if  (planet === 'Jupiter'){
+        return parseFloat((number / 31557600 / 11.862615).toFixed(2));
+    }
+     if  (planet === 'Saturn'){
+        return parseFloat((number / 31557600 / 29.447498).toFixed(2));
+    }
+     if  (planet === 'Uranus'){
+        return parseFloat((number / 31557600 / 84.016846).toFixed(2));
+    }
+     if  (planet === 'Neptune'){
+        return parseFloat((number / 31557600 / 164.79132).toFixed(2));
+    }
+return spaceAge()
 
-}
+} 
